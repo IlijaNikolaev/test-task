@@ -1,6 +1,7 @@
 import {Container} from "@mui/material";
 import TaskList from "../components/TaskList/TaskList";
 import Form from "../components/Form/Form";
+import Header from "../components/Header/Header";
 import React, {useState} from "react";
 import taskMock from "../mocks/taskMock";
 
@@ -15,12 +16,16 @@ const MainPage = () => {
 
 
     return(
-        <Container sx={{pt:5, textAlign:'left'}}>
-            <h2>Add Task</h2>
-            <Form setTasks={setTasks}/>
-            <h2>Tasks List</h2>
-            <TaskList tasks={tasks} setTasks={setTasks}/>
-        </Container>
+        <>
+            <Header/>
+            <Container sx={{pt:5, textAlign:'left'}}>
+                <h2>Add Task</h2>
+                <Form setTasks={setTasks}/>
+                <h2>Tasks List</h2>
+                <TaskList tasks={tasks} setTasks={setTasks}/>
+            </Container>
+        </>
+
     )
 }
 
