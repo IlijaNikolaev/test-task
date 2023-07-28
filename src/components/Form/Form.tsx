@@ -42,7 +42,7 @@ const Form = ({setTasks}: FormProps) => {
     }
     return(
         <div style={{borderBottom:'1px solid black', marginBottom:'30px'}}>
-            <form action="#" style={{display:'flex', justifyContent:'space-between', marginBottom:'30px'}}>
+            <form action="#" style={{display:'flex', justifyContent:'space-between', marginBottom:'30px', alignItems:'flex-end'}}>
                 <label htmlFor="type">
                     Task Type
                     <InputStyled value={formState.type} onChange={handleInputChange} type="text" name='type' id='type'/>
@@ -56,7 +56,14 @@ const Form = ({setTasks}: FormProps) => {
                 <InputStyled value={formState.timeToDo} onChange={handleInputChange} type="text" name='timeToDo'/>
                   </label>
               
-                <Button variant='outlined' type='submit' onClick={handleSubmit}>Add</Button>
+                <Button
+                    variant='outlined'
+                    type='submit'
+                    style={{
+                        color:'#023da5',
+                        border:'1px solid #023da5',
+                        height:'37px'}}
+                    onClick={handleSubmit}>Add</Button>
             </form>
         </div>
 

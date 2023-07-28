@@ -43,7 +43,7 @@ const ListWithAllTasks = ({tasks, setTasks}: TaskListProps) => {
                             sx={{
                                 color: (theme) => theme.palette.grey[500],
                             }}>
-                            <CloseIcon />
+                            <CloseIcon sx={{color:'rgb(231, 255, 0)'}}/>
                         </IconButton>
                     </div>
                 </ItemWrapperStyled>
